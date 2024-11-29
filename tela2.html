@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Tarefas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 400px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+      font-weight: bold;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    input[type="radio"] {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .radio-group {
+      margin-bottom: 15px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .btn-save {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-cancel {
+      background-color: #ccc;
+      color: #333;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-save:hover {
+      background-color: #45a049;
+    }
+
+    .btn-cancel:hover {
+      background-color: #b0b0b0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Cadastro de Tarefas</h1>
+    <form action="#" method="POST">
+      <label for="descricao">Descrição da Tarefa:</label>
+      <input type="text" id="descricao" name="descricao" placeholder="Digite a descrição da tarefa" required>
+
+      <label for="setor">Nome do Setor:</label>
+      <select id="setor" name="setor" required>
+        <option value="">Selecione um setor</option>
+        <option value="producao">Produção</option>
+        <option value="vendas">Vendas</option>
+        <option value="administrativo">Administrativo</option>
+      </select>
+
+      <label>Prioridade:</label>
+      <div class="radio-group">
+        <input type="radio" id="prioridade-baixa" name="prioridade" value="baixa" required>
+        <label for="prioridade-baixa">Baixa</label>
+        <input type="radio" id="prioridade-media" name="prioridade" value="media">
+        <label for="prioridade-media">Média</label>
+        <input type="radio" id="prioridade-alta" name="prioridade" value="alta">
+        <label for="prioridade-alta">Alta</label>
+      </div>
+
+      <label for="usuario">Usuário Responsável:</label>
+      <select id="usuario" name="usuario" required>
+        <option value="">Selecione um usuário</option>
+        <option value="1">Usuário 1</option>
+        <option value="2">Usuário 2</option>
+        <option value="3">Usuário 3</option>
+      </select>
+
+      <div class="buttons">
+        <button type="submit" class="btn-save">Salvar</button>
+        <button type="button" class="btn-cancel" onclick="window.location.href='/'">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
